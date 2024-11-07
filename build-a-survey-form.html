@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link href="styles.css" rel="stylesheet"/>
+  </head>
+
+  <header>
+    <h1 id="title" class="title">Survey Form</h1> 
+    <p id="description">Please fill out this form with the required informtion</p>
+  </header>
+
+  <body>
+    <form id="survey-form">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name" id="name-label">Enter Your Name (required)<input id="name" type="text" name="name" placeholder="ex. Marcos" required /></label>
+        <label for="email" id="email-label">Enter Your Email (required)<input id="email" type="email" name="email" placeholder="ex. merosomal_rammers@aleeas.com" required /></label>
+        <label for="number" id="number-label">Enter A Number (optional)<input id="number" type="number" name="number" min="0" max="69" placeholder="must be between 0-69" /></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>About Yourself</legend>
+
+        <label>What is your favorite music genre?</label>
+        <select id="dropdown">
+          <option value="">(select one)</option>
+          <option value="1">Metal</option>
+          <option value="2">Reggaeton</option>
+          <option value='3'>Rap</option>
+          <option value='4'>Other</option>
+        </select>
+
+        <label>If you had to choose one, which genre would you listen for the rest of your life? (required)</label>
+        <label for="metal"><input id="metal" type="radio" value="1" name="music" class="inline" checked /> Metal</label>
+        <label for="reggaeton"><input id="reggaeton" type="radio" value="2" name="music" class="inline" /> Reggaeton</label>
+        <label for='rap'><input id='rap' type='radio' value='3' name='music' class='inline' /> Rap</label>
+        
+        <label>Which genres are you interested in listeing? (Select all that apply)</label>
+        <label for="survey-form"><input class="inline" id="survey-form" type="checkbox" value="1" name="survey-form" /> Metal</label>
+        <label for="survey-form"><input class="inline" id="survey-form" type="checkbox"  value="2" name="survery-form" /> Reggaeton</label>
+        <label for="survey-form"><input class="inline" id="survey-form" type="checkbox"  value="3" name="survery-form" /> Rap</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Reasoning</legend>
+
+        <label for="reasoning">Why do you want to choose the answers you did?<textarea id="reasoning" name="reasoning" placeholder="I like coding on the beach..."></textarea></label>
+
+        <input type="submit" id="submit" />
+        
+      </fieldset>
+    </form>
+  </body>
+
+  <!-- tags are what is inbetween < >, ex, <body> is a tag -->
+<!-- an attribute is what is inside the tags, ex, <p id="">, id=" is an attribute"  -->
+<!-- an element is what is inbetween the opening and closing tags, ex, <title>Digital Nomad</title>, Digital Nomad is an element -->
+
+<!-- id is for naming individual attributes, name is for grouping attributes together -->
+<!-- form is for containing different types of input elements, such as text fields, checkboxes, radio buttons, submit buttons, etc. -->
+
+<!-- label elements are used to help associate the text for an input element with the input element itself (this is great for mouse users) -->
+<!-- the for attribute of <label> must be equal to the id attribute of the related element to bind them together -->
+
+ <!--legend elements create columns of text, whereas if you were to write everything in the label or intpu elements, the text would continue across a horzontal line  -->
+
+
+<!-- <legend> defines a caption for the <fieldset>  -->
+<!-- <fieldset> is used to group related elements in a form by drawing a  box around the related elements -->
+
+<!-- select creates a dropdown menu -->
+
+<!-- textarea creates an area where the user can input text -->
+
+<!-- submit creates a submit button for the webpage -->
+
+
+body {
+  background-color: #1b1b32;
+  color: white;
+  font-size: 24;
+}
+
+/* Label elements are "in-line" by default, which means text goes across the webpage horizontally, like a word document. If you desire to display text as columns, then make display equal to block. Think blocks stacked on top of one another.*/
+
+label {
+  display: block;
+  margin: 10px 0; /* Adds 10 pixels of space above and below each label element.*/
+}
+
+/* If an element is nested within another element, such as a input nested in label, then the values with '%' will be with respect to their respective element. Ex. If label has width of 100px, and input has width of 50%, then input width = 50px.*/
+
+input {
+  margin: 10px 0; /* Adds 10 pixels space above and below each input and textarea element.*/
+  width: 100%;
+}
+
+/* When calling on values set by attributes, such as class="inline", inline must be written with a '.' before the name 'inline' */
+
+.inline {
+  width: unset; /* This overrides any previous width declarations */
+}
+
+textarea {
+  display: block;
+  margin: 10px 0;
+  height: 100px;
+  width: 100%;
+}
+
+
+
